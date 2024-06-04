@@ -1,0 +1,21 @@
+name: CI Workflow
+'on':
+  pull_request:
+    branches:
+      - main
+    jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Build
+        run: |
+          echo "Building the project..."
+          # Add your build steps here
+          exit 0
+      - name: Run Tests
+        run: |
+          echo "Running tests..."
+          # Add your test commands here
+          exit 0
